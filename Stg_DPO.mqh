@@ -44,17 +44,6 @@ struct Stg_DPO_Params_Defaults : StgParams {
   }
 };
 
-#ifdef __config__
-// Loads pair specific param values.
-#include "config/H1.h"
-#include "config/H4.h"
-#include "config/H8.h"
-#include "config/M1.h"
-#include "config/M15.h"
-#include "config/M30.h"
-#include "config/M5.h"
-#endif
-
 class Stg_DPO : public Strategy {
  public:
   Stg_DPO(StgParams &_sparams, TradeParams &_tparams, ChartParams &_cparams, string _name = "")
@@ -64,10 +53,6 @@ class Stg_DPO : public Strategy {
     // Initialize strategy initial values.
     Stg_DPO_Params_Defaults stg_dpo_defaults;
     StgParams _stg_params(stg_dpo_defaults);
-#ifdef __config__
-    SetParamsByTf<StgParams>(_stg_params, _tf, stg_dpo_m1, stg_dpo_m5, stg_dpo_m15, stg_dpo_m30, stg_dpo_h1, stg_dpo_h4,
-                             stg_dpo_h8);
-#endif
     // Initialize Strategy instance.
     ChartParams _cparams(_tf, _Symbol);
     TradeParams _tparams;
