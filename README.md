@@ -15,13 +15,7 @@ This is example dpo strategy for the dponstration purposes.
 
 | Tag      | Framework |
 |:--------:|:---------:|
-| v1.000   | v2.000    |
-| v1.001   | v2.001    |
-| ...      | ...       |
-| v1.010   | v2.010    |
-| v1.011   | v2.011.1  |
-| v1.012   | v2.012.1  |
-| v1.013   | v2.013    |
+| v2.000   | v3.000.1  |
 
 <!-- Named links -->
 
